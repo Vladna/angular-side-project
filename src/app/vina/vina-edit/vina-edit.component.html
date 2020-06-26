@@ -1,1 +1,77 @@
-<p>vina-edit works!</p>
+<div class="row" style="padding-left: 100px;">
+    <div class="col-xs-12">
+      <form [formGroup]="vinaForm" (ngSubmit)="onSubmit()">
+  
+        <div class="row"style="margin:10px" >
+          <div class="col-xs-12">
+            <button type="submit" class="btn btn-success" [disabled]="!vinaForm.valid">Sacuvaj izmene</button>
+            <button type="submit" class="btn btn-danger" (click)="onCancel()">Obrisi izmene</button>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-10">
+            <div class="form-group">
+              <label for="ime">Ime Vina</label>
+              <input type="text" id="ime" formControlName="ime" style="width: 250%" class="form-control">
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-10">
+            <div class="form-group">
+              <label for="vrsta">Vrsta Vina</label>
+              <input type="text" id="vrsta" formControlName="vrsta" style="width: 250%" class="form-control">
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-10">
+            <div class="form-group">
+              <label for="kolicina">Kolicina</label>
+              <input type="text" id="kolicina" formControlName="kolicina" style="width: 250%" class="form-control">
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-10">
+            <div class="form-group">
+              <label for="opis">Opis Vina</label>
+              <input type="text" id="opis" formControlName="opis" style="width: 250%" class="form-control">
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-10">
+            <div class="form-group">
+              <label for="cena">Cena</label>
+              <input type="text" id="cena" formControlName="cena" style="width: 250%" class="form-control">
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-10">
+            <div class="form-group">
+              <label for="imageURL">Link za Sliku</label>
+              <input type="text" id="imageUrl" style="width: 250%" formControlName="imageUrl" class="form-control"
+                #imageURL>
+            </div>
+          </div>
+        </div>
+  
+        <div class="row">
+          <div class="col-xs-10">
+            <img [src]="imageURL.value" class="img-responsive" style="width: 450px">
+          </div>
+        </div>
+  
+  
+  
+      </form>
+    </div>
+  </div>
