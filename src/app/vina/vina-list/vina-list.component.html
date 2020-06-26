@@ -1,1 +1,12 @@
-<p>vina-list works!</p>
+<div class="row">
+    <div class="col-xs-12">
+        <button class="btn btn-success" (click)="onNewVina()">Nova vina</button>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="col-xs-12">
+
+        <app-vina-item *ngFor="let vino of vina; let i = index" [vina]="vino" [index]="i"></app-vina-item>
+    </div>
+</div>
