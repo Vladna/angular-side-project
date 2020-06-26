@@ -67,8 +67,8 @@ export class VinaEditComponent implements OnInit {
       'ime': new FormControl(ime, Validators.required),
       'vrsta': new FormControl(vrsta, Validators.required),
       'kolicina': new FormControl(kolicina, Validators.required),
-      'opis': new FormControl(opis, Validators.required),
-      'cena': new FormControl(cena, Validators.required),
+      'opis': new FormControl(opis,[ Validators.required,Validators.maxLength(40)]),
+      'cena': new FormControl(cena, [ Validators.required,Validators.pattern(/^[1-9]+[0-9]*$/)]),
       'imageUrl': new FormControl(imageUrl, Validators.required),
 
     });
