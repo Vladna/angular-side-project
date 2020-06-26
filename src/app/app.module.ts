@@ -16,6 +16,8 @@ import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
 import { VinaService } from './vino.service';
  
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DataStorageService } from './data-storage.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,9 +35,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
-  providers: [VinaService],
+  providers: [VinaService,DataStorageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

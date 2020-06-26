@@ -25,6 +25,10 @@ export class VinaService {
         this.shoppingCart.splice(index,1);
         this.shopingCartChanged.next(this.shoppingCart.slice());
     }
+    setVina(vina:Vina[]){
+        this.vina=vina;
+        this.vinaChanged.next(this.vina.slice());
+    }
     getVina() {
         return this.vina.slice();
     }

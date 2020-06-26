@@ -18,8 +18,8 @@
       <li  class="nav-item dropdown" ngbDropdown>
         <a ngbDropdownToggle class="nav-link dropdown-toggle"  id="dropdown01" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Upravljanje podatcima <span class="caret"></span></a>
         <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="dropdown01">
-          <a class="dropdown-item" >Sacuvaj vina</a>
-          <a class="dropdown-item" >Prikazi vina</a>
+          <a class="dropdown-item" (click)="onSaveData()" >Sacuvaj vina</a>
+          <a class="dropdown-item" (click)="onFetchData()">Prikazi vina</a>
          
         </div>
       </li>
