@@ -7,8 +7,8 @@ import { Vina } from './vino.model';
 export class VinaService {
     vinaChanged = new Subject<Vina[]>();
     private vina: Vina[] = [
-        new Vina('Tempranillo', 'Crveno vino', '1,5L', 'Crveno vino proizvdeno u Spaniji', '100', 'http://www.vinoteka.co.rs/media/spanija/Spanska-vina-15.jpg'),
-        new Vina('Mira', 'Crveno vino', '1,5L', 'Crveno vino proizvdeno u Spaniji', '120', 'http://www.vinoteka.co.rs/media/spanija/Spanska-vina-16.jpg')
+        /* new Vina('Tempranillo', 'Crveno vino', '1,5L', 'Crveno vino proizvdeno u Spaniji', '100', 'http://www.vinoteka.co.rs/media/spanija/Spanska-vina-15.jpg'),
+        new Vina('Mira', 'Crveno vino', '1,5L', 'Crveno vino proizvdeno u Spaniji', '120', 'http://www.vinoteka.co.rs/media/spanija/Spanska-vina-16.jpg') */
     ]
     shoppingCart: Vina[] = [];
     shopingCartChanged = new Subject<Vina[]>();
