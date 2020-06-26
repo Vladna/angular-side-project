@@ -1,1 +1,39 @@
-<p>shopping-cart works!</p>
+<div class="row">
+
+</div>
+<hr>
+
+
+<div class="row">
+    <div class="col-xs-10" *ngFor="let v of vinaShoppingCart;let i = index">
+        <div class="card" style="width: 18rem;">
+            <img src="{{v.imageUrl}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{v.ime}}</h5>
+                <p class="card-text">{{v.opis}}</p>
+                <p>Vrsta {{v.vrsta}}</p>
+                <p>Kolicina:{{v.kolicina}}</p>
+                <p>Cena: {{v.cena}} evra</p>
+                <button class="btn btn-danger" (click)="onDeleteShoppingCartItem(i)">Obrisi</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+<div class="row">
+
+    <div class="col-xs-10">
+        <button (click)="cenaShoppingCart()" class="btn btn-success">CheckOut</button>
+    </div>
+
+</div>
+<div class="row">
+    <div class="col-xs-10">
+        <p *ngIf="cena!=0">
+            Ukupan cena vina u korpi je:
+            {{cena}} evra</p>
+
+
+    </div>
+</div>
