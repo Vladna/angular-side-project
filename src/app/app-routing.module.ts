@@ -11,7 +11,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/vina', pathMatch: 'full' },
   {
     path: 'vina', component: VinaComponent, children: [
-      { path: '', component: VinaComponent },
+      
       { path: 'new', component: VinaEditComponent },
       { path: ':id', component: VinaDetailComponent },
       { path: ':id/edit', component: VinaEditComponent },
